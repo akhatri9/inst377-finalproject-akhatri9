@@ -5,10 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trends</title>
     <link rel="stylesheet" href="css/styles.css">
-    
+    <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script defer src="js/trends.js"></script>
 
 </head>
 <body>
-    
+    <nav>
+        <a href="index.html">Dashboard</a>
+        <a href="trends.html">Trends</a>
+        <a href="lookup.html">Lookup</a>
+        <a href="about.html">About</a>
+    </nav>
+
+    <div class="container">
+
+    <h1>Historical Trends</h1>
+
+    <input id="symbolInput" placeholder="AAPL">
+
+    <button onclick="loadChart()">Load Chart</button>
+
+    <canvas id="stockChart"></canvas>
+
+    </div>
+
 </body>
 </html>
