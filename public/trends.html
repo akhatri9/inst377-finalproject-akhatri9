@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trends</title>
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/style.css">
     <script defer src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script defer src="js/trends.js"></script>
 
@@ -17,15 +17,69 @@
         <a href="about.html">About</a>
     </nav>
 
-    <div class="container">
+    <div class="trends-layout">
 
-        <h1>Historical Trends</h1>
+        <aside class="sidebar card">
 
-        <input id="symbolInput" placeholder="AAPL">
+            <h2>Popular Stocks</h2>
 
-        <button onclick="loadChart()">Load Chart</button>
+            <button
+            class="button-86 stock-button"
+            onclick="loadChart('AAPL')">
+            AAPL
+            </button>
 
-        <canvas id="stockChart"></canvas>
+            <button
+            class="button-86 stock-button"
+            onclick="loadChart('MSFT')">
+            MSFT
+            </button>
+
+            <button
+            class="button-86 stock-button"
+            onclick="loadChart('NVDA')">
+            NVDA
+            </button>
+
+            <button
+            class="button-86 stock-button"
+            onclick="loadChart('TSLA')">
+            TSLA
+            </button>
+
+            <button
+            class="button-86 stock-button"
+            onclick="loadChart('AMZN')">
+            AMZN
+            </button>
+
+        </aside>
+
+        <main class="trends-main">
+
+            <div class="card">
+
+                <h1>Historical Trends</h1>
+
+                <input
+                    id="symbolInput"
+                    placeholder="Enter Symbol"
+                >
+
+                <button
+                    class="button-85"
+                    onclick="searchChart()">
+                    Load Chart
+
+                </button>
+
+                <div class="chart-container">
+                    <canvas id="stockChart"></canvas>
+                </div>
+
+            </div>
+
+        </main>
 
     </div>
 
