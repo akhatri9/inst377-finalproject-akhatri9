@@ -21,6 +21,23 @@ const supabase = createClient(
 
 const API_KEY = process.env.TWELVE_API_KEY;
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
+
+
+app.get('/about', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'about.html'));
+});
+
+app.get('/trends', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'trends.html'));
+});
+
+app.get('/lookup', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'lookup.html'));
+});
+
 app.get('/api/watchlist', async (req, res) => {
 
   const { data, error } = await supabase
